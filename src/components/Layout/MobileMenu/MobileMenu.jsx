@@ -1,8 +1,8 @@
 import { MobileMenuIcons } from "../../../assets/icons/MobileMenuIcons";
 
-const MobileMenu = ({ setIsOpen, menuRef }) => {
+const MobileMenu = ({ setIsOpen, innerRef, className }) => {
   return (
-    <div className="mobile-menu move-right" ref={menuRef}>
+    <div className={className} ref={innerRef}>
       <h3 className="mobile-menu__title">
         Меню
         <button
