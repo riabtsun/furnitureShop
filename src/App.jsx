@@ -8,8 +8,10 @@ import Cart from "./pages/Cart/Cart.jsx";
 import Room from "./pages/Room/Room.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 import "./styles/style.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ky from "ky";
+import Login from "./pages/Login/Login.jsx";
+import Registration from "./pages/Registration/Registration.jsx";
 
 function App() {
   useEffect(() => {
@@ -30,6 +32,9 @@ function App() {
         <Route path="/room" element={<Room />} />
         <Route path="*" element={<NotFound />} />
       </Route>
+
+      <Route path="/login" element={<Login />} />
+      <Route path="/registration" element={<Registration />} />
     </Routes>
   );
 }

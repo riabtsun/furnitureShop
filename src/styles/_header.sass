@@ -1,5 +1,31 @@
-//.mobile-menu
-//  padding: 21px 15px 39px 26px
+.header-top
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 10px 0 12px
+  background: #313131
+  .container
+    width: 100%
+    display: flex
+    justify-content: space-between
+  &__nav
+    display: flex
+    column-gap: 30px
+    align-items: center
+    background: #313131
+    &-link
+      color: #fff
+      font-size: 14px
+      font-weight: 400
+      line-height: normal
+      display: flex
+      column-gap: 10px
+  &__contacts
+    display: flex
+    column-gap: 30px
+    svg path
+      fill: #fff
+
 
 .header
   position: fixed
@@ -7,8 +33,11 @@
   left: 0
   display: block
   width: 100%
+  z-index: 2
   .menu-btn
     order: 1
+    @media screen and (min-width: 992px)
+      display: none
   .main-logo
     order: 2
   &-main
@@ -16,6 +45,8 @@
     display: flex
     align-items: center
     flex-wrap: wrap
+    @media screen and (min-width: 768px)
+      justify-content: space-between
   &-main__search-wrap
     position: relative
     display: flex
@@ -24,6 +55,9 @@
     @media screen and (min-width: 768px)
       order: 3
       max-width: 243px
+    @media screen and (min-width: 992px)
+      width: 100%
+      max-width: 700px
     &:focus
       svg
         display: none
@@ -31,12 +65,19 @@
       position: absolute
       left: 15px
       top: 50%
+      @media screen and (min-width: 768px)
+        top: 35%
   &-main__search
     width: 100%
     border: none
     background-color: #f9f9f9
     padding: 12px 15px
     margin-top: 16px
+    @media screen and (min-width: 768px)
+      margin-top: 0
+    @media screen and (min-width: 992px)
+      background-color: transparent
+      border: 1px solid #e6e6e6
   &-main__search,
   &-main__search::placeholder
     color: #414141
@@ -45,6 +86,21 @@
     line-height: normal
   &-main__search::placeholder
     padding-left: 50px
+  &-main__delivery
+    display: none
+    @media screen and (min-width: 768px)
+      display: flex
+      align-items: center
+      gap: 10px
+      order: 4
+      &-text
+        color: #414141
+        font-size: 12px
+        font-weight: 400
+        line-height: normal
+    @media screen and (min-width: 992px)
+      display: none
+
 
 
 .user-bar
@@ -54,7 +110,9 @@
   margin-left: auto
   order: 3
   @media screen and (min-width: 768px)
-    order: 4
+    order: 5
+    margin-right: inherit
+    margin-left: inherit
   &__link
     color: #000
     font-size: 16px

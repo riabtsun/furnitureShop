@@ -1,0 +1,110 @@
+.product-card
+  display: flex
+  flex-direction: column
+  width: 50%
+  transition: .3s
+  cursor: pointer
+  @media screen and (min-width: 768px)
+    padding: 20px 15px
+    width: 33.3333%
+  @media screen and (min-width: 992px)
+    width: 25%
+  &:hover
+    box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.11)
+    &__parameters
+      display: block
+  &__img
+    width: 95px
+    height: 72px
+    margin: 12px auto 25px
+    @media screen and (min-width: 768px)
+      width: 160px
+      height: 120px
+      margin: 30px auto
+    @media screen and (min-width: 992px)
+      width: 200px
+      height: 150px
+      margin-top: 38px
+      margin-bottom: 54px
+  &__name
+    color: #414141
+    font-size: 13px
+    font-weight: 500
+    line-height: normal
+    margin-bottom: 4px
+    @media screen and (min-width: 768px)
+      font-size: 14px
+      margin-bottom: 6px
+    @media screen and (min-width: 992px)
+      font-size: 16px
+  &__type
+    color: #414141
+    font-size: 10px
+    font-weight: 400
+    line-height: normal
+    margin-bottom: 2px
+    @media screen and (min-width: 768px)
+      font-size: 11px
+      margin-bottom: 8px
+    @media screen and (min-width: 992px)
+      margin-bottom: 9px
+  &__price
+    color: #414141
+    font-size: 13px
+    font-weight: 500
+    line-height: normal
+    display: flex
+    column-gap: 5px
+    display: flex
+    align-items: center
+    @media screen and (min-width: 768px)
+      font-size: 14px
+  &__old-price
+    color: #ccc
+    font-size: 10px
+    font-weight: 500
+    line-height: normal
+    text-decoration-line: line-through
+    @media screen and (min-width: 768px)
+      font-size: 11px
+  &__parameters
+    display: none
+    &-name
+      display: inline-block
+      color: #414141
+      font-size: 12px
+      font-style: normal
+      font-weight: 400
+      line-height: normal
+      margin-top: 15px
+      margin-bottom: 8px
+    &-sizes
+      display: flex
+      justify-content: space-between
+    &-item
+      display: flex
+      flex-direction: column
+      row-gap: 8px
+      &-name
+        color: #c4c4c4
+        font-size: 9px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+      &-quantity
+        color: #414141
+        font-size: 9px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+    &-add
+      width: 100%
+      display: flex
+      justify-content: center
+      padding: 12px 0
+      color: #fff
+      font-size: 13px
+      font-weight: 400
+      line-height: normal
+      background-color: #245462
+      margin-top: 17px

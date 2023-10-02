@@ -3,7 +3,12 @@
 //@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap')
 @import 'header'
 @import "bannerSlider"
+@import "product-card"
+@import "form"
 
+body
+  position: relative
+  z-index: 1
 
 .container
   max-width: 290px
@@ -11,8 +16,8 @@
   margin: 0 auto
   border: 1px solid red
   @media screen and (min-width: 768px)
-    width: 768px
     padding: 0 25px
     max-width: 1180px
   @media screen and (min-width: 992px)
-    padding: 0 20px
+    max-width: 1140px
+    padding: 0
